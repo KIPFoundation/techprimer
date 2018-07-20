@@ -1,6 +1,6 @@
 [book]
-title = "KIP Whitepaper"
-description = "Experimental representation of KIP's Whitepaper"
+title = "KIP Technical Primer"
+description = "Experimental representation of KIP's Technical Primer"
 authors = ["KIP Foundation"]
 multilingual = false
 src = "src"
