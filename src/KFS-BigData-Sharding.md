@@ -1,6 +1,6 @@
 ### Big Data & Sharding
 
-![KFS Big Data Persistence](../images/tech-primer/KIP-Big-Data-Persistence.png)
+![KFS Big Data Persistence](images/tech-primer/KIP-Big-Data-Persistence.png)
 
 <p align="center"> <b>Fig 19:</b> KFS - Big Data Persistence <sup><a href="#references"></a></sup> </p>
 
@@ -10,7 +10,7 @@ $$
 
 KFS is designed in an effective manner to support the persistence & operation of large volumes of Big Data.
 
-![KFS Sharding](../images/tech-primer/KFS-Sharding.png)
+![KFS Sharding](images/tech-primer/KFS-Sharding.png)
 
 <p align="center"> <b>Fig 20:</b> KFS - Sharding Approach <sup><a href="#references"></a></sup> </p>
 

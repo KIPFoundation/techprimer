@@ -139,7 +139,7 @@
                         <a class="header" href="Throughput.html#throughput" id="throughput"><h3>Throughput</h3></a>
 <p>KIP facilitates high frequency enterprise operations by leveraging the reactive actor streams<sup><a href="Throughput.html#references">[13]</a></sup> offered by TARA. Reactive streams are based on the concept of deadlock-free &quot;execute-only-once&quot; ordering<sup><a href="Throughput.html#references">[14]</a></sup>.</p>
 <p>The state channels hosted by the grand nodes &amp; star nodes are facilitated by an actor concurrency model consisting of hybrid <code>mutex</code> &amp; <code>chan</code> spaces across the network. This hybrid structure allows us to achieve concurrency without tradeoffs at the JUG(EVM<sup><a href="Throughput.html#references">[15]</a></sup>-like) on blocking calls needed to perform function calls. However, each node belonging to respective state channel is a member of a subset of a super-set channel, thereby maintaining systemic information on the wallets &amp; smart contracts.</p>
-<p><img src="../images//tech-primer/KIP-Throughput.png" alt="KIP Throughput" /></p>
+<p><img src="images//tech-primer/KIP-Throughput.png" alt="KIP Throughput" /></p>
 <p align="center"> <b>Fig 3:</b> KIP - Actor-based throughput model with reactive streams<sup><a href="Throughput.html#references"></a></sup> </p>
 <p>$$
 \Delta

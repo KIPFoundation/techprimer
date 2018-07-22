@@ -1,6 +1,6 @@
 ## Development Realm
 
-![KIDE](../images/tech-primer/kide.png)
+![KIDE](images/tech-primer/kide.png)
 
 <p align="center"> <b>Fig 11:</b> KIDE, Krama Services & Developer Tools <sup><a href="#references"></a></sup> </p>
 

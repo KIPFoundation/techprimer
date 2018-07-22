@@ -1,6 +1,6 @@
 <h1 align="center">Krama Intelligent Protocol (KIP)<br>Technical Primer</h1>
 
-![Krama Intelligent Protocol - Logo](../images/logo.png)
+![Krama Intelligent Protocol - Logo](images/logo.png)
 
 <h3 align="center">WORKING DRAFT</h3>
 <!-- <h4 align="center">AUTHORS</h4> -->

@@ -2,7 +2,7 @@
 
 KIP's wallet is enhanced with an addition of new attribute - TDU, a new mechanism with a collective measure of values, in high frequency transactional environment.
 
-![TDU - Mechanism](../images/tech-primer/TDU-Capture_Mechanism.png)
+![TDU - Mechanism](images/tech-primer/TDU-Capture_Mechanism.png)
 
 <p align="center"> <b>Fig 8:</b> TDU - value capture mechanism with interaction vectors<sup><a href="#references"></a></sup> </p>
 
@@ -20,7 +20,7 @@ KIP introduces the TDU factor by leveraging the application of *Interaction vect
 
 - *Method vectors:* This fundamental vector is a continuation to the efforts of the causal vectors. Each transaction propagated in the KIP network is a payload attributed with timestamp, nonce, fee & associated asset class at any given time. The means to achieve the fulfillment & finality of the transactions are the typical attributes of this vector. The conditions influencing the decision to initiate the transaction is attributed in the causal vector & hence the content is fairly dynamic.
 
-![KIP TDU - Persistence of Value](../images/tech-primer/KIP-TDU-Persistence-of-Value.png)
+![KIP TDU - Persistence of Value](images/tech-primer/KIP-TDU-Persistence-of-Value.png)
 <p align="center"> <b>Fig 9:</b> TDU - Persistence of multi-dimensional value <sup><a href="#references"></a></sup> </p>
 
 $$

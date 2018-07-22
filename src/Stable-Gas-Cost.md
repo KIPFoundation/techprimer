@@ -2,7 +2,7 @@
 
 In the interest of long-lasting adoption & predictable TCO(Total Cost of Ownership), KIP promotes the concept of stable gas cost to balance the economics of using the platform resources. This is made possible by the concept of weighted volatility management.
 
-![KIP Gas Cost Stability](../images/tech-primer/KIP-Stable-Gas-Cost-Macro.png)
+![KIP Gas Cost Stability](images/tech-primer/KIP-Stable-Gas-Cost-Macro.png)
 
 <p align="center"> <b>Fig 4:</b> KIP - Macro view of Gas Cost Stabilization <sup><a href="#references"></a></sup> </p>
 
@@ -12,13 +12,13 @@ $$
 
 Node Benchmark program in each on-boarding node uses Pricing API to fetch updated prices of compute, memory, storage & bandwidth units from respective infrastructure service providers. In case of on-premise resources used by a sub-set of nodes, KIP members are entitled to govern a benchmark program that could closely predict the cost to performance ratio & propagate the output in parallel to information fetched by the oracles mentioned above. The cost aggregator is applied on the obtained array of variate costs, ensuring no loss covered by owner running the nodes with cost in the maxima region of the cost distribution.
 
-![KIP Infrastructure Cost - Fair Market Value](../images/tech-primer/KIP-Stable-Gas-Cost-Infra-FMV.png)
+![KIP Infrastructure Cost - Fair Market Value](images/tech-primer/KIP-Stable-Gas-Cost-Infra-FMV.png)
 
 <p align="center"> <b>Fig 5:</b> KIP - Fair Market Value of Infrastructure Cost & Verification Costs<sup><a href="#references"></a></sup> </p>
 
 Aggregated cost is calculated based on the tier of hardware independent of the cloud service provider, to ensure covering loss gap for node operators in the maxima region. The new calculated costs are propagated to the network for approval by node operators in the respective tiers. The voting diApp termed as *Tier Cost Contracts* is used by the vested node operators to update the costs upon the approval by majority of eligible node operators. The new costs are made effective within a specific epoch, which is again subjected to voting by the same.
 
-![KIP Infrastructure Cost - KIP Price Discovery](../images/tech-primer/KIP-Stable-Gas-Cost-Price-Discovery.png)
+![KIP Infrastructure Cost - KIP Price Discovery](images/tech-primer/KIP-Stable-Gas-Cost-Price-Discovery.png)
 
 <p align="center"> <b>Fig 6:</b> KIP - On-chain KIP Token Price Discovery <sup><a href="#references"></a></sup> </p>
 
@@ -29,7 +29,7 @@ The cost to performance ratio calculated by the benchmark program is recorded in
 
 The GasTables for each OPCODE & mathematical functions are also maintained in the form of an index.
 
-![KIP Infrastructure Cost - KIP Price Discovery](../images/tech-primer/KIP-Stable-Gas-Cost-Volatility-Mgmt.png)
+![KIP Infrastructure Cost - KIP Price Discovery](images/tech-primer/KIP-Stable-Gas-Cost-Volatility-Mgmt.png)
 
 <p align="center"> <b>Fig 7:</b> KIP - Internal view of volatility management in gas costs <sup><a href="#references"></a></sup> </p>
 

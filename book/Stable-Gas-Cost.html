@@ -138,22 +138,22 @@
                     <main>
                         <a class="header" href="Stable-Gas-Cost.html#stable-gas-cost" id="stable-gas-cost"><h3>Stable gas cost</h3></a>
 <p>In the interest of long-lasting adoption &amp; predictable TCO(Total Cost of Ownership), KIP promotes the concept of stable gas cost to balance the economics of using the platform resources. This is made possible by the concept of weighted volatility management.</p>
-<p><img src="../images/tech-primer/KIP-Stable-Gas-Cost-Macro.png" alt="KIP Gas Cost Stability" /></p>
+<p><img src="images/tech-primer/KIP-Stable-Gas-Cost-Macro.png" alt="KIP Gas Cost Stability" /></p>
 <p align="center"> <b>Fig 4:</b> KIP - Macro view of Gas Cost Stabilization <sup><a href="Stable-Gas-Cost.html#references"></a></sup> </p>
 <p>$$
 \Delta
 $$</p>
 <p>Node Benchmark program in each on-boarding node uses Pricing API to fetch updated prices of compute, memory, storage &amp; bandwidth units from respective infrastructure service providers. In case of on-premise resources used by a sub-set of nodes, KIP members are entitled to govern a benchmark program that could closely predict the cost to performance ratio &amp; propagate the output in parallel to information fetched by the oracles mentioned above. The cost aggregator is applied on the obtained array of variate costs, ensuring no loss covered by owner running the nodes with cost in the maxima region of the cost distribution.</p>
-<p><img src="../images/tech-primer/KIP-Stable-Gas-Cost-Infra-FMV.png" alt="KIP Infrastructure Cost - Fair Market Value" /></p>
+<p><img src="images/tech-primer/KIP-Stable-Gas-Cost-Infra-FMV.png" alt="KIP Infrastructure Cost - Fair Market Value" /></p>
 <p align="center"> <b>Fig 5:</b> KIP - Fair Market Value of Infrastructure Cost & Verification Costs<sup><a href="Stable-Gas-Cost.html#references"></a></sup> </p>
 <p>Aggregated cost is calculated based on the tier of hardware independent of the cloud service provider, to ensure covering loss gap for node operators in the maxima region. The new calculated costs are propagated to the network for approval by node operators in the respective tiers. The voting diApp termed as <em>Tier Cost Contracts</em> is used by the vested node operators to update the costs upon the approval by majority of eligible node operators. The new costs are made effective within a specific epoch, which is again subjected to voting by the same.</p>
-<p><img src="../images/tech-primer/KIP-Stable-Gas-Cost-Price-Discovery.png" alt="KIP Infrastructure Cost - KIP Price Discovery" /></p>
+<p><img src="images/tech-primer/KIP-Stable-Gas-Cost-Price-Discovery.png" alt="KIP Infrastructure Cost - KIP Price Discovery" /></p>
 <p align="center"> <b>Fig 6:</b> KIP - On-chain KIP Token Price Discovery <sup><a href="Stable-Gas-Cost.html#references"></a></sup> </p>
 <p>KIP also exhibits an extensive ability to record the economic value of exchange transactions for KIPs paired directly with a decentralized virtual currency such as the Dai(A decentralized stablecoin on Ethereum)<sup><a href="Stable-Gas-Cost.html#references">[16]</a></sup>, or paired indirectly with other cryptocurrencies available for trade. The objective is to derive at a weighted average value of KIP vs. a stablecoin pegged to a major reserve such as the US Dollar for balancing the associated costs. The average shall be weighted against the Dai/KIP ratio and reset by new values on announcement of new epochs, as voted by vetted KIP holders &amp; node managers.</p>
 <p> 
 The cost to performance ratio calculated by the benchmark program is recorded in a transparent index maintained by respective nodes. The ratio for each OPCODE class is aggregated based on the tier &amp; the global lookup index is updated each time a finite set of new nodes are added or removed belonging to the specified tier for an epoch.</p>
 <p>The GasTables for each OPCODE &amp; mathematical functions are also maintained in the form of an index.</p>
-<p><img src="../images/tech-primer/KIP-Stable-Gas-Cost-Volatility-Mgmt.png" alt="KIP Infrastructure Cost - KIP Price Discovery" /></p>
+<p><img src="images/tech-primer/KIP-Stable-Gas-Cost-Volatility-Mgmt.png" alt="KIP Infrastructure Cost - KIP Price Discovery" /></p>
 <p align="center"> <b>Fig 7:</b> KIP - Internal view of volatility management in gas costs <sup><a href="Stable-Gas-Cost.html#references"></a></sup> </p>
 <p>The gas cost balancer comprises of a self-balancing utilitarian formula which compares the estimated gas required with the computational cost to execute the same in the specified tier and variates the gasPrice to match the total of verification price to achieve finality among all <code>n</code> nodes.</p>
 <blockquote>

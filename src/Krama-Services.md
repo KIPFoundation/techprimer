@@ -4,15 +4,15 @@ Krama Services offer the developers to seamlessly integrate information & proces
 
 Krama Services are broadly categorized into 12 types of services and are as follows:
 
-![Krama Services - 1](../images/tech-primer/KS-1.png)
+![Krama Services - 1](images/tech-primer/KS-1.png)
 
 <p align="center"> <b>Fig 13-A:</b> Krama Services - Group 1 <sup><a href="#references"></a></sup> </p>
 
-![Krama Services - 2](../images/tech-primer/KS-2.png)
+![Krama Services - 2](images/tech-primer/KS-2.png)
 
 <p align="center"> <b>Fig 13-B:</b> Krama Services - Group 2 <sup><a href="#references"></a></sup> </p>
 
-![Krama Services - 3](../images/tech-primer/KS-3.png)
+![Krama Services - 3](images/tech-primer/KS-3.png)
 
 <p align="center"> <b>Fig 13-C:</b> Krama Services - Group 3 <sup><a href="#references"></a></sup> </p>
 

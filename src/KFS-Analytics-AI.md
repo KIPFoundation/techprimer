@@ -1,6 +1,6 @@
 ### Analytics & AI Practices
 
-![KFS Analytics & AI Practices](../images/tech-primer/KFS-Analytics-AI-Practices.png)
+![KFS Analytics & AI Practices](images/tech-primer/KFS-Analytics-AI-Practices.png)
 
 <p align="center"> <b>Fig 22:</b> Analytics & AI Practices on KFS <sup><a href="#references"></a></sup> </p>
 

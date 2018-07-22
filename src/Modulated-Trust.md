@@ -4,7 +4,7 @@ KIP leverages the concept of selective hearing<sup><a href="#references">[9]</a>
 
 Similarly, enterprise stakeholders in a heterogenous business network operate to persist transactional information that favours their respective success. The "single floor communication" philosophy adopted by blockchain has been observed as a challenge, to differentiate priorities between verifying transactions pertaining to lower & relatively higher asset values.
 
-![KIP Modulated Trust](../images/tech-primer/KIP-Modulated-Trust.png)
+![KIP Modulated Trust](images/tech-primer/KIP-Modulated-Trust.png)
 
 <p align="center"> <b>Fig 2:</b> KIP - Modulated Trust & NTQ-based state channel approach <sup><a href="#references"></a></sup> </p>
 

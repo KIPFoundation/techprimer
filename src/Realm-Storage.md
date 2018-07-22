@@ -8,7 +8,7 @@ KIP offers a native decentralized file storage system called Krama File System(K
 
 KFS stores the information and persists changes to the stored information in cryptographic signatures with new checksum-like signatures representing the change in state. KFS is an extension to the IPFS(InterPlanetary File System)<sup><a href="#references">[18]</a></sup>.
 
-![KFS Permissioned Storage](../images/tech-primer/KIP-KFS-Permissioned-Storage.png)
+![KFS Permissioned Storage](images/tech-primer/KIP-KFS-Permissioned-Storage.png)
 
 <p align="center"> <b>Fig 18:</b> KFS - Permissioned Storage & Proxy channels for inter-channel data sharing <sup><a href="#references"></a></sup> </p>
 

@@ -1,6 +1,6 @@
 ### DEX - Decentralized Exchange
 
-![KIP Inline DEX Matching Engine](../images/tech-primer/KIP-DEX.png)
+![KIP Inline DEX Matching Engine](images/tech-primer/KIP-DEX.png)
 
 <p align="center"> <b>Fig 17:</b> KIP Inline DEX Matching Engine <sup><a href="#references"></a></sup> </p>
 

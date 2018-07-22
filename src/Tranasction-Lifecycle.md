@@ -1,6 +1,6 @@
 ### Transaction lifecycle
 
-![KIP Txn Lifecycle](../images/tech-primer/KIP-Txn-Lifecycle.png)
+![KIP Txn Lifecycle](images/tech-primer/KIP-Txn-Lifecycle.png)
 
 <p align="center"> <b>Fig 10:</b> KIP's transaction lifecycle <sup><a href="#references"></a></sup> </p>
 

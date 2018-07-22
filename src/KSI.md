@@ -2,7 +2,7 @@
 
 Applications in the enterprise environment demands high availability of services along a degree of service & location transparency. Some of the existing blockchain platforms have failed at both: achieving the service integrations with existing infrastructure & solution realms without compromise in availability and cost.  
 
-![Krama Service Interface](../images/tech-primer/KIP-KSI.png)
+![Krama Service Interface](images/tech-primer/KIP-KSI.png)
 
 <p align="center"> <b>Fig 12:</b> KSI - Krama Service Interface (Internal Architecture) <sup><a href="#references"></a></sup> </p>
 

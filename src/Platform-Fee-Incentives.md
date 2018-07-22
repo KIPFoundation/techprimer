@@ -1,6 +1,6 @@
 ### Platform fee & incentivization
 
-![KIP Platform Fee & Incentivization](../images/tech-primer/KIP-Fee-and-Incentivization.png)
+![KIP Platform Fee & Incentivization](images/tech-primer/KIP-Fee-and-Incentivization.png)
 
 <p align="center"> <b>Fig 16:</b> KIP Incentivization model <sup><a href="#references"></a></sup> </p>
 

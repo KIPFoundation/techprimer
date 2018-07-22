@@ -141,7 +141,7 @@
 <a class="header" href="Realm-Storage.html#permissioned-storage" id="permissioned-storage"><h3>Permissioned Storage</h3></a>
 <p>KIP offers a native decentralized file storage system called Krama File System(KFS). The file system offers a few groundbreaking measures to reduce the unneeded cost of storing the data on blockchain.</p>
 <p>KFS stores the information and persists changes to the stored information in cryptographic signatures with new checksum-like signatures representing the change in state. KFS is an extension to the IPFS(InterPlanetary File System)<sup><a href="Realm-Storage.html#references">[18]</a></sup>.</p>
-<p><img src="../images/tech-primer/KIP-KFS-Permissioned-Storage.png" alt="KFS Permissioned Storage" /></p>
+<p><img src="images/tech-primer/KIP-KFS-Permissioned-Storage.png" alt="KFS Permissioned Storage" /></p>
 <p align="center"> <b>Fig 18:</b> KFS - Permissioned Storage & Proxy channels for inter-channel data sharing <sup><a href="Realm-Storage.html#references"></a></sup> </p>
 <p>KIP initiates permissioned KFS networks by deploying a genesis node with a custom swarm key<sup><a href="Realm-Storage.html#references">[19]</a></sup>. The swarm key shall be shared with other nodes that are willing to participate in the permissioned networks. Evidently, the new nodes joining the network with reference to swarm key have access to the files stored in the genesis node &amp; the other predecessor nodes within the <em>swarm</em>.</p>
 <p>KIP shall also support the ability to request data via RESTful API from other swarms by bridging two or more disparate swarms, keeping the partition between swarms intact.</p>
