@@ -1,0 +1,3 @@
+## Abstract
+
+This technical primer aims to deliver technically resourceful information such as the approaches, models, frameworks & design patterns used to develop the KIP network & its underlying services. The paper elaborates on the technical design contrast between existing prominent blockchains, distributed file storage systems & KIP's digital mesh of the 3rd generation blockchain realms, storage realms along with business-front services.
