@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Sentinel Scalability - KIP Technical Primer</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Experimental representation of KIP's Technical Primer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+    </head>
+    <body class="light">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="index.html"><strong aria-hidden="true">1.</strong> Home</a></li><li><a href="Abstract.html"><strong aria-hidden="true">2.</strong> Abstract</a></li><li><a href="Introduction.html"><strong aria-hidden="true">3.</strong> Introduction</a></li><li><ol class="section"><li><a href="Introduction.html"><strong aria-hidden="true">3.1.</strong> Existing systems</a></li></ol></li><li><a href="Sentinel-Scalability.html" class="active"><strong aria-hidden="true">4.</strong> Proposed System</a></li><li><ol class="section"><li><a href="Sentinel-Scalability.html" class="active"><strong aria-hidden="true">4.1.</strong> Sentinel Scalability</a></li><li><a href="Modulated-Trust.html"><strong aria-hidden="true">4.2.</strong> Modulated Trust</a></li><li><a href="Throughput.html"><strong aria-hidden="true">4.3.</strong> Throughput</a></li><li><a href="Stable-Gas-Cost.html"><strong aria-hidden="true">4.4.</strong> Stable Gas Cost</a></li><li><a href="TDU.html"><strong aria-hidden="true">4.5.</strong> TDU - Total Digital Utility</a></li><li><a href="Tranasction-Lifecycle.html"><strong aria-hidden="true">4.6.</strong> Transaction Lifecycle</a></li><li><a href="Block-Characterization.html"><strong aria-hidden="true">4.7.</strong> Block Characterization</a></li></ol></li><li><a href="KIDE.html"><strong aria-hidden="true">5.</strong> Development Realm</a></li><li><ol class="section"><li><a href="KIDE.html"><strong aria-hidden="true">5.1.</strong> KIDE - Krama Integrated Development Environment</a></li><li><a href="KSI.html"><strong aria-hidden="true">5.2.</strong> Krama Service Interface</a></li><li><a href="Krama-Services.html"><strong aria-hidden="true">5.3.</strong> Krama Services</a></li></ol></li><li><a href="Realm-Blockchain.html"><strong aria-hidden="true">6.</strong> Blockchain Realm</a></li><li><ol class="section"><li><a href="Realm-Blockchain.html"><strong aria-hidden="true">6.1.</strong> JUG - The EVM++</a></li><li><a href="Platform-Fee-Incentives.html"><strong aria-hidden="true">6.2.</strong> Platform fee &amp; incentivization</a></li><li><a href="Blockchain-Krama-DEX.html"><strong aria-hidden="true">6.3.</strong> DEX - Decentralized Exchange</a></li></ol></li><li><a href="Realm-Storage.html"><strong aria-hidden="true">7.</strong> Storage Realm</a></li><li><ol class="section"><li><a href="Realm-Storage.html"><strong aria-hidden="true">7.1.</strong> Permissioned Storage</a></li><li><a href="KFS-BigData-Sharding.html"><strong aria-hidden="true">7.2.</strong> Big Data &amp; Sharding</a></li><li><a href="Leypa.html"><strong aria-hidden="true">7.3.</strong> Data interface for Apps</a></li><li><a href="KFS-Analytics-AI.html"><strong aria-hidden="true">7.4.</strong> Analytics &amp; AI Practices</a></li></ol></li><li><a href="Conclusion.html"><strong aria-hidden="true">8.</strong> Conclusion</a></li><li><a href="Improvements.html"><strong aria-hidden="true">9.</strong> Improvements</a></li><li><a href="Implementation.html"><strong aria-hidden="true">10.</strong> Implementation</a></li><li><a href="Acknowledgement.html"><strong aria-hidden="true">11.</strong> Acknowledgement</a></li><li><a href="References.html"><strong aria-hidden="true">12.</strong> References</a></li><li><a href="Further-Reading.html"><strong aria-hidden="true">13.</strong> Further Reading</a></li><li><a href="Appendix-A.html"><strong aria-hidden="true">14.</strong> Appendix A: Terminology</a></li><li><a href="Appendix-B.html"><strong aria-hidden="true">15.</strong> Appendix B: Mathematical Proof &amp; Correctness</a></li><li><a href="Appendix-C.html"><strong aria-hidden="true">16.</strong> Appendix C: FAQs and Concerns</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">KIP Technical Primer</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="Sentinel-Scalability.html#proposed-system" id="proposed-system"><h2>Proposed System</h2></a>
+<ul>
+<li>We propose a composite system with extended abilities to support better network attributes by approaching existing limitations with sentinel scalability, modulated trust, and actor-based throughput.</li>
+<li>The proposed system extends the value measuring capabilities in a blockchain-alike transactional environment with Total Digital Utility(TDU) scores.</li>
+<li>Also, the economical uncertainty in performing transactions on the blockchain is addressed by the method of stable gas costing mechanism.</li>
+</ul>
+<p>We discuss each of approaches here in detail:</p>
+<a class="header" href="Sentinel-Scalability.html#sentinel-scalability" id="sentinel-scalability"><h3>Sentinel Scalability</h3></a>
+<p>KIP leverages TARA(Ternary Augmented Raft Architecture)<sup><a href="Sentinel-Scalability.html#references">[3]</a></sup>, an enhanced version of RAFT<sup><a href="Sentinel-Scalability.html#references">[4]</a></sup> algorithm, for high-frequency consensus, simplified service discovery &amp; dynamic node management.</p>
+<p>TARA provides multi-faceted abilities to manage a network of distributed systems by managing nodes in a graph format. Analogous to vertices connected acyclically by drawing edges in a graph, nodes are connected by an RPC(Remote Procedure Call)<sup><a href="Sentinel-Scalability.html#references">[5]</a></sup> connection between them. The RPC connections establish a network in a hybrid manner.</p>
+<p>Each node in the KIP system is defined in the following structure:</p>
+<pre><code class="language-go">
+type Node struct {
+    state    NodeState		// Whether an Orphan, Follower, Candidate OR a Leader
+    role     NodeRole		// Whether is under service, star or master subnet
+
+    eventmux *event.TypeMux // Event multiplexer used between the services of a stack
+    config   *Config
+    accman   *accounts.Manager
+
+    ephemeralKeystore string         // if non-empty, the key directory that will be removed by Stop
+    instanceDirLock   flock.Releaser // prevents concurrent use of instance directory
+
+    serverConfig p2p.Config
+    server       *p2p.Server // Currently running P2P networking layer
+
+    serviceFuncs []ServiceConstructor     // Service constructors (in dependency order)
+    services     map[reflect.Type]Service // Currently running services
+
+    rpcAPIs       []rpc.API   // List of APIs currently provided by the node
+    inprocHandler *rpc.Server // In-process RPC request handler to process the API requests
+
+    ipcEndpoint string       // IPC endpoint to listen at (empty = IPC disabled)
+    ipcListener net.Listener // IPC RPC listener socket to serve API requests
+    ipcHandler  *rpc.Server  // IPC RPC request handler to process the API requests
+
+    httpEndpoint  string       // HTTP endpoint (interface + port) to listen at (empty = HTTP disabled)
+    httpWhitelist []string     // HTTP RPC modules to allow through this endpoint
+    httpListener  net.Listener // HTTP RPC listener socket to server API requests
+    httpHandler   *rpc.Server  // HTTP RPC request handler to process the API requests
+
+    wsEndpoint string       // Websocket endpoint (interface + port) to listen at (empty = websocket disabled)
+    wsListener net.Listener // Websocket RPC listener socket to server API requests
+    wsHandler  *rpc.Server  // Websocket RPC request handler to process the API requests
+
+    stop chan struct{} // Channel to wait for termination notifications
+    lock sync.RWMutex
+}
+
+</code></pre>
+<p>wherein the state and mode attributes are enumerated as follows:</p>
+<pre><code class="language-go">
+type NodeState int32
+
+const (
+    ORPHAN    NodeState = 0
+    FOLLOWER  NodeState = 1
+    CANDIDATE NodeState = 2
+    LEADER    NodeState = 3
+)
+var NodeStateMap map[common.Hash]uint
+
+
+type NodeRole int32
+
+const (
+    IDLE_ROLE    NodeMode = 0
+    SERVICE_ROLE NodeMode = 1
+    STAR_ROLE    NodeMode = 2
+    GRAND_ROLE   NodeMode = 3
+)
+var NodeRoleMap map[common.Hash]uint
+
+</code></pre>
+<p>TARA, based on PBFT hardened RAFT facilitates the network with addition and removal of nodes in a dynamic manner. A formal specifications for the same here:</p>
+<pre><code class="language-go">
+func ParseNode(string enodeURL) {
+    // Parse node info by its enode:/// URL
+}
+
+func addPeer(Node node) {
+    // Add the peer into a specific network
+}
+
+func (n *Node) setPeerRole() error {
+    // Update the status of the node under its type definition
+}
+
+func (n *Node) getPeerRole() error {
+    // Get the current role of the specified node by its type definition
+}
+
+func removePeer(Node node) {
+    //  Remove the node from the specified network &amp; revoke all access
+}
+
+</code></pre>
+<p>TARA leverages raftpb<sup><a href="Sentinel-Scalability.html#references">[6]</a></sup> - The Protobuf<sup><a href="Sentinel-Scalability.html#references">[7]</a></sup> implementation for RAFT from CoreOS' etcd<sup><a href="Sentinel-Scalability.html#references">[8]</a></sup> package to manage &amp; broadcast network level changes due to addition or removal of peers.</p>
+<p><img src="images/tech-primer/KIP-Sentinel-Scalability.png" alt="KIP Sentinel Scalability" /></p>
+<p align="center"> <b>Fig 1:</b> KIP - Sentinel Scalability and node management with NTQ <sup><a href="Sentinel-Scalability.html#references"></a></sup> </p>
+<p>KIP's approach to achieving sentinel scalability is by observing the interest of the new nodes joining the network, hosted by interested parties called <em>verifiers</em>. Each node is vetted for reliability &amp; commercial viability by a benchmarking program that receives the above mentioned interests as input from the owners of the node.</p>
+<p>KIP's node benchmark program calculates the reliability based on 2 criteria:</p>
+<ol>
+<li>
+<p><strong>Hardware specifications:</strong><br />
+The program collects the host's following hardware information:</p>
+<ul>
+<li>CPU's architecture,</li>
+<li>Number of CPU(s),</li>
+<li>Thread(s) per core,</li>
+<li>CPU's frequency,</li>
+<li>MIPS,</li>
+<li>Total cache size,</li>
+<li>Total main memory,</li>
+<li>Available space in the reserved partition,</li>
+<li>OS type &amp; version, and</li>
+<li>Kernel build</li>
+</ul>
+<p>The collected attribute values are aggregated to find the mean score, upon which the node is declared valid under a tier or vice-versa.</p>
+</li>
+</ol>
+<p>$$
+\Delta
+$$</p>
+<ol start="2">
+<li><strong>Network Specifications:</strong><br />
+The benchmark programs then communicates with the node by sending a specific number of arbitrary messages in an encapsulated virtual network to calculate the responsive potential of the node. The measured throughput is compared with the average throughput of all the nodes in the network.</li>
+</ol>
+<p>$$
+\Delta
+$$</p>
+<ol start="3">
+<li><strong>Interest Verification:</strong><br />
+The benchmark program also keeps track of the transactions verified by the node for a brief period of time. The monitoring is kept under observation to reserve the interest of the new node in the network &amp; to eliminate bad actor interests from the network. The aggregate of number of transactions dropped over the time observed is compared for shaping the Node Trust Quotient (NTQ) in full.</li>
+</ol>
+<p>$$
+\Delta
+$$</p>
+<p>Upon passing the specification tests, the eligible nodes joining the KIP network is considered &quot;orphan&quot; role with only an ability to become a member of the shadow pool verifying shadow broadcasts, until the KIP's network orchestrator adds the peer into a state channel. Once the node is added into a state channel, the node is assigned the &quot;Follower&quot; role &amp; hence entitled to verify the transactions passed on to its state channels. However, all follower nodes belonging to arbitrary state channels are also responsible for verifying the transactions propagated in the shadow broadcasts shared by the grand leader.</p>
+<blockquote>
+<p><strong>Node Lifecycle - Formal Notation:</strong></p>
+<p><strong>STEP 1:</strong> Initiate a <code>Node</code> instance with <code>knode://</code> url</p>
+<p><strong>STEP 2:</strong> Add the peer into the relevant state channels with <code>addPeer(node)</code></p>
+<p><strong>STEP 3:</strong> Acknowledge the addition of the node with <code>chainExtensionMessage</code></p>
+<p><strong>STEP 4:</strong> Node verifies the transactions propagated from both Fast Follow &amp; Shadow Broadcast</p>
+<p><strong>STEP 5:</strong> Node vests a finite number of KIP tokens &amp; performs its duties for at least minimum duration to contend in the election of star leader</p>
+<p><strong>STEP 6:</strong> Leadership is transferred to the candidate node with majority votes &amp; shared across the network with <code>ProposeConfChange()</code></p>
+<p><strong>STEP 7:</strong> The new star leader receives the transactions passed by the classifier from master nodes &amp; maintains leadership by sharing the heartbeat to all following service nodes in the state channels</p>
+<p><strong>STEP 8:</strong> Star nodes vest an extra number of KIP tokens to contend in the elections for Grand Nodes &amp; changes to the network leadership is again broadcasted across the network</p>
+<p><strong>STEP 8:</strong> The election occurs again in case of time-out from the leaders at all levels</p>
+<p><strong>STEP 9:</strong> Nodes are removed due to malicious attempts or cause of faults with <code>removePeer(node)</code></p>
+<p><strong>STEP 10:</strong> The network changes are broadcasted &amp; process repeats</p>
+</blockquote>
+<p>Every successful modification to the network will be ratified by the <code>chainExtensionMessage</code> - a network update heartbeat sent across to all the nodes in the pertaining network by its leader.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="Introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="Sentinel-Scalability.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="Introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="Sentinel-Scalability.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="searchindex.js" type="text/javascript" charset="utf-8"></script>
+        
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

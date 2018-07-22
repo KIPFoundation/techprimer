@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>References - KIP Technical Primer</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Experimental representation of KIP's Technical Primer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+    </head>
+    <body class="light">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="index.html"><strong aria-hidden="true">1.</strong> Home</a></li><li><a href="Abstract.html"><strong aria-hidden="true">2.</strong> Abstract</a></li><li><a href="Introduction.html"><strong aria-hidden="true">3.</strong> Introduction</a></li><li><ol class="section"><li><a href="Introduction.html"><strong aria-hidden="true">3.1.</strong> Existing systems</a></li></ol></li><li><a href="Sentinel-Scalability.html"><strong aria-hidden="true">4.</strong> Proposed System</a></li><li><ol class="section"><li><a href="Sentinel-Scalability.html"><strong aria-hidden="true">4.1.</strong> Sentinel Scalability</a></li><li><a href="Modulated-Trust.html"><strong aria-hidden="true">4.2.</strong> Modulated Trust</a></li><li><a href="Throughput.html"><strong aria-hidden="true">4.3.</strong> Throughput</a></li><li><a href="Stable-Gas-Cost.html"><strong aria-hidden="true">4.4.</strong> Stable Gas Cost</a></li><li><a href="TDU.html"><strong aria-hidden="true">4.5.</strong> TDU - Total Digital Utility</a></li><li><a href="Tranasction-Lifecycle.html"><strong aria-hidden="true">4.6.</strong> Transaction Lifecycle</a></li><li><a href="Block-Characterization.html"><strong aria-hidden="true">4.7.</strong> Block Characterization</a></li></ol></li><li><a href="KIDE.html"><strong aria-hidden="true">5.</strong> Development Realm</a></li><li><ol class="section"><li><a href="KIDE.html"><strong aria-hidden="true">5.1.</strong> KIDE - Krama Integrated Development Environment</a></li><li><a href="KSI.html"><strong aria-hidden="true">5.2.</strong> Krama Service Interface</a></li><li><a href="Krama-Services.html"><strong aria-hidden="true">5.3.</strong> Krama Services</a></li></ol></li><li><a href="Realm-Blockchain.html"><strong aria-hidden="true">6.</strong> Blockchain Realm</a></li><li><ol class="section"><li><a href="Realm-Blockchain.html"><strong aria-hidden="true">6.1.</strong> JUG - The EVM++</a></li><li><a href="Platform-Fee-Incentives.html"><strong aria-hidden="true">6.2.</strong> Platform fee &amp; incentivization</a></li><li><a href="Blockchain-Krama-DEX.html"><strong aria-hidden="true">6.3.</strong> DEX - Decentralized Exchange</a></li></ol></li><li><a href="Realm-Storage.html"><strong aria-hidden="true">7.</strong> Storage Realm</a></li><li><ol class="section"><li><a href="Realm-Storage.html"><strong aria-hidden="true">7.1.</strong> Permissioned Storage</a></li><li><a href="KFS-BigData-Sharding.html"><strong aria-hidden="true">7.2.</strong> Big Data &amp; Sharding</a></li><li><a href="Leypa.html"><strong aria-hidden="true">7.3.</strong> Data interface for Apps</a></li><li><a href="KFS-Analytics-AI.html"><strong aria-hidden="true">7.4.</strong> Analytics &amp; AI Practices</a></li></ol></li><li><a href="Conclusion.html"><strong aria-hidden="true">8.</strong> Conclusion</a></li><li><a href="Improvements.html"><strong aria-hidden="true">9.</strong> Improvements</a></li><li><a href="Implementation.html"><strong aria-hidden="true">10.</strong> Implementation</a></li><li><a href="Acknowledgement.html"><strong aria-hidden="true">11.</strong> Acknowledgement</a></li><li><a href="References.html" class="active"><strong aria-hidden="true">12.</strong> References</a></li><li><a href="Further-Reading.html"><strong aria-hidden="true">13.</strong> Further Reading</a></li><li><a href="Appendix-A.html"><strong aria-hidden="true">14.</strong> Appendix A: Terminology</a></li><li><a href="Appendix-B.html"><strong aria-hidden="true">15.</strong> Appendix B: Mathematical Proof &amp; Correctness</a></li><li><a href="Appendix-C.html"><strong aria-hidden="true">16.</strong> Appendix C: FAQs and Concerns</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">KIP Technical Primer</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="References.html#references" id="references"><h2>References</h2></a>
+<p>[1] Vitalik Buterin et. al. “A Next-Generation Smart Contract and Decentralized Application Platform” 2013; <a href="https://github.com/ethereum/wiki/wiki/White-Paper">https://github.com/ethereum/wiki/wiki/White-Paper</a></p>
+<p>[2] Miguel Castro et. al. “Practical Byzantine Fault Tolerance” 1999; <a href="http://pmg.csail.mit.edu/papers/osdi99.pdf">http://pmg.csail.mit.edu/papers/osdi99.pdf</a></p>
+<p>[3] Ganesh Prasad Kumble et. al. “TARA: Ternary Augmented Raft Architecture” 2017; <a href="https://github.com/TARAFramework/docs/blob/master/TARA.pdf">https://github.com/TARAFramework/docs/blob/master/TARA.pdf</a></p>
+<p>[4] Diego Ongaro et. al. “In Search of an Understandable Consensus Algorithm” 2013; <a href="https://raft.github.io/raft.pdf">https://raft.github.io/raft.pdf</a></p>
+<p>[5] PER BRINCH HANSEN et. al. “DISTRIBUTED PROCESSES: A CONCURRENT PROGRAMMING CONCEPT” 1978; <a href="http://brinch-hansen.net/papers/1978a.pdf">http://brinch-hansen.net/papers/1978a.pdf</a></p>
+<p>[6] Core OS et. al.; <a href="https://godoc.org/github.com/coreos/etcd/raft/raftpb">https://godoc.org/github.com/coreos/etcd/raft/raftpb</a></p>
+<p>[7] Google et. al. ; <a href="https://developers.google.com/protocol-buffers/">https://developers.google.com/protocol-buffers/</a></p>
+<p>[8] Core OS et. al. ; <a href="https://github.com/coreos/etcd">https://github.com/coreos/etcd</a></p>
+<p>[9] Christopher Meiklejohn et. al. “Selective Hearing: An Approach to Distributed,
+Eventually Consistent Edge Computation” 2015; <a href="http://christophermeiklejohn.com/publications/wpsds-2015-preprint.pdf">http://christophermeiklejohn.com/publications/wpsds-2015-preprint.pdf</a></p>
+<p>[10] NIST et. al. “SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions” 2015; <a href="https://csrc.nist.gov/csrc/media/publications/fips/202/final/documents/fips_202_draft.pdf">https://csrc.nist.gov/csrc/media/publications/fips/202/final/documents/fips_202_draft.pdf</a></p>
+<p>[11] IPFS et. al. ; <a href="https://github.com/libp2p/go-libp2p-kad-dht/blob/ae1294466c96a403fb7a6447fbcd30b8d31a27bc/lookup.go">https://github.com/libp2p/go-libp2p-kad-dht/blob/ae1294466c96a403fb7a6447fbcd30b8d31a27bc/lookup.go</a></p>
+<p>[12] Petar Maymounkov et. al. “Kademlia:A Peer-to-peer Information System Based on the XOR Metric” 2002; <a href="http://www.divms.uiowa.edu/%7Eghosh/kademlia.pdf">http://www.divms.uiowa.edu/~ghosh/kademlia.pdf</a></p>
+<p>[13] Carl Hewitt et. al. “Actor Model of Computation” 2010; <a href="https://arxiv.org/vc/arxiv/papers/1008/1008.1459v8.pdf">https://arxiv.org/vc/arxiv/papers/1008/1008.1459v8.pdf</a></p>
+<p>[14] Lightbend et. al. “Akka Message Delivery - Execute only once” 2013; <a href="https://developer.lightbend.com/blog/2017-08-10-atotm-akka-messaging-part-1/index.html">https://developer.lightbend.com/blog/2017-08-10-atotm-akka-messaging-part-1/index.html</a></p>
+<p>[15] Ethereum et. al. ; <a href="https://github.com/ethereum/wiki/wiki/Ethereum-Virtual-Machine-(EVM)-Awesome-List">https://github.com/ethereum/wiki/wiki/Ethereum-Virtual-Machine-(EVM)-Awesome-List</a></p>
+<p>[16] MakerDAO et. al. “The Dai Stablecoin System” 2017; [https://makerdao.com/whitepaper/DaiDec17WP.pdf]https://makerdao.com/whitepaper/DaiDec17WP.pdf](https://makerdao.com/whitepaper/DaiDec17WP.pdf]https://makerdao.com/whitepaper/DaiDec17WP.pdf)</p>
+<p>[17] Jason Teutsch et. al. “On decentralized oracles for data availability” 2017; <a href="https://people.cs.uchicago.edu/%7Eteutsch/papers/decentralized_oracles.pdf">https://people.cs.uchicago.edu/~teutsch/papers/decentralized_oracles.pdf</a></p>
+<p>[18] Juan Benet et. al. “IPFS - Content Addressed, Versioned, P2P File System” 2017; <a href="https://ipfs.io/ipfs/QmR7GSQM93Cx5eAg6a6yRzNde1FQv7uL6X1o4k7zrJa3LX/ipfs.draft3.pdf">https://ipfs.io/ipfs/QmR7GSQM93Cx5eAg6a6yRzNde1FQv7uL6X1o4k7zrJa3LX/ipfs.draft3.pdf</a></p>
+<p>[19] Jakub Sztandera et. al. ; <a href="https://github.com/Kubuxu/go-ipfs-swarm-key-gen">https://github.com/Kubuxu/go-ipfs-swarm-key-gen</a></p>
+<p>[20] Konstantin Shvachko et. al. “The Hadoop Distributed File System” 2008; <a href="http://storageconference.us/2010/Papers/MSST/Shvachko.pdf">http://storageconference.us/2010/Papers/MSST/Shvachko.pdf</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="Acknowledgement.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="Further-Reading.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="Acknowledgement.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="Further-Reading.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="searchindex.js" type="text/javascript" charset="utf-8"></script>
+        
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
