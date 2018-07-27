@@ -845,6 +845,22 @@ $$</p>
 <p align="center"> <b>Fig 18:</b> KFS - Permissioned Storage & Proxy channels for inter-channel data sharing <sup><a href="print.html#references"></a></sup> </p>
 <p>KIP initiates permissioned KFS networks by deploying a genesis node with a custom swarm key<sup><a href="print.html#references">[19]</a></sup>. The swarm key shall be shared with other nodes that are willing to participate in the permissioned networks. Evidently, the new nodes joining the network with reference to swarm key have access to the files stored in the genesis node &amp; the other predecessor nodes within the <em>swarm</em>.</p>
 <p>KIP shall also support the ability to request data via RESTful API from other swarms by bridging two or more disparate swarms, keeping the partition between swarms intact.</p>
+<blockquote>
+<p><strong>Distributed Storage &amp; Access - Formal Notation:</strong></p>
+<p><strong>STEP 1:</strong> User initiates a transaction with an intent to purchase a good or consume service.</p>
+<p><strong>STEP 2:</strong> The transaction is generated once signed by the user's private key along with sender &amp; recipient address, attributed to <code>from</code> and <code>to</code> of the <em>identity vectors</em>.</p>
+<p><strong>STEP 3:</strong> The <em>causal vectors</em> are attributed with the behavioral patterns captured by the diApp, before and after the transaction has been signed by the user.</p>
+<p><strong>STEP 4:</strong> The payload attributes such as <code>timestamp</code>, <code>nonce</code>, <code>payload length</code>, <code>fee</code>, <code>tier</code> etc. are captured into the <em>method vectors</em> when the signed transaction is transported from the diApp to the network's transaction pool.</p>
+<p><strong>STEP 5:</strong> The network-level dynamics subjected to fulfil and finalize the given transaction is recorded until the epoch of confirmation expires.</p>
+<p><strong>STEP 6:</strong> Each set of capture pertaining to the concerned user accounts are aggregated by their wallet address. This set is called a &quot;Burst&quot;.</p>
+<p><strong>STEP 7:</strong> The bursts are then passed as an input to stored procedures in a data-driven training model to gain an aggregated measure of value.</p>
+<p><strong>STEP 8:</strong> The obtained value is categorized based on the asset affected by the transaction.</p>
+<p><strong>STEP 9:</strong> The categorized value is averaged with preceding values in the respective KIP wallets.</p>
+<p><strong>STEP 10:</strong> The corresponding TDU balance is updated throughout the network</p>
+</blockquote>
+<p>$$
+\Delta
+$$</p>
 <a class="header" href="print.html#storage-realm-1" id="storage-realm-1"><h2>Storage Realm</h2></a>
 <p>As a hybrid mesh, KIP offers the user to store information into permissioned datastores in a decentralized manner with comprehensive abilities to share the stored information to a limited number of audience in an encrypted medium.</p>
 <a class="header" href="print.html#permissioned-storage-1" id="permissioned-storage-1"><h3>Permissioned Storage</h3></a>
@@ -854,30 +870,56 @@ $$</p>
 <p align="center"> <b>Fig 18:</b> KFS - Permissioned Storage & Proxy channels for inter-channel data sharing <sup><a href="print.html#references"></a></sup> </p>
 <p>KIP initiates permissioned KFS networks by deploying a genesis node with a custom swarm key<sup><a href="print.html#references">[19]</a></sup>. The swarm key shall be shared with other nodes that are willing to participate in the permissioned networks. Evidently, the new nodes joining the network with reference to swarm key have access to the files stored in the genesis node &amp; the other predecessor nodes within the <em>swarm</em>.</p>
 <p>KIP shall also support the ability to request data via RESTful API from other swarms by bridging two or more disparate swarms, keeping the partition between swarms intact.</p>
+<blockquote>
+<p><strong>Distributed Storage &amp; Access - Formal Notation:</strong></p>
+<p><strong>STEP 1:</strong> User initiates a transaction with an intent to purchase a good or consume service.</p>
+<p><strong>STEP 2:</strong> The transaction is generated once signed by the user's private key along with sender &amp; recipient address, attributed to <code>from</code> and <code>to</code> of the <em>identity vectors</em>.</p>
+<p><strong>STEP 3:</strong> The <em>causal vectors</em> are attributed with the behavioral patterns captured by the diApp, before and after the transaction has been signed by the user.</p>
+<p><strong>STEP 4:</strong> The payload attributes such as <code>timestamp</code>, <code>nonce</code>, <code>payload length</code>, <code>fee</code>, <code>tier</code> etc. are captured into the <em>method vectors</em> when the signed transaction is transported from the diApp to the network's transaction pool.</p>
+<p><strong>STEP 5:</strong> The network-level dynamics subjected to fulfil and finalize the given transaction is recorded until the epoch of confirmation expires.</p>
+<p><strong>STEP 6:</strong> Each set of capture pertaining to the concerned user accounts are aggregated by their wallet address. This set is called a &quot;Burst&quot;.</p>
+<p><strong>STEP 7:</strong> The bursts are then passed as an input to stored procedures in a data-driven training model to gain an aggregated measure of value.</p>
+<p><strong>STEP 8:</strong> The obtained value is categorized based on the asset affected by the transaction.</p>
+<p><strong>STEP 9:</strong> The categorized value is averaged with preceding values in the respective KIP wallets.</p>
+<p><strong>STEP 10:</strong> The corresponding TDU balance is updated throughout the network</p>
+</blockquote>
+<p>$$
+\Delta
+$$</p>
 <a class="header" href="print.html#big-data--sharding" id="big-data--sharding"><h3>Big Data &amp; Sharding</h3></a>
 <p><img src="images/tech-primer/KIP-Big-Data-Persistence.png" alt="KFS Big Data Persistence" /></p>
 <p align="center"> <b>Fig 19:</b> KFS - Big Data Persistence <sup><a href="print.html#references"></a></sup> </p>
-<p>$$
-\Delta
-$$</p>
 <p>KFS is designed in an effective manner to support the persistence &amp; operation of large volumes of Big Data.</p>
 <p><img src="images/tech-primer/KFS-Sharding.png" alt="KFS Sharding" /></p>
 <p align="center"> <b>Fig 20:</b> KFS - Sharding Approach <sup><a href="print.html#references"></a></sup> </p>
-<p>This is made possible by integrating our file system with HDFS<sup><a href="print.html#references">[20]</a></sup> at a fundamental, a highly scalable filesystem for copious amount of Big Data. The native interface is established to create, read, update &amp; delete the information between shared between internal big data file systems and respective KFS network.  </p>
+<p>This is made possible by integrating our file system with HDFS<sup><a href="print.html#references">[20]</a></sup> at a fundamental, a highly scalable filesystem for copious amount of Big Data. The native interface is established to create, read, update &amp; delete the information between shared between internal big data file systems and respective KFS network.</p>
+<p>$$
+\Delta
+$$</p>
 <a class="header" href="print.html#data-interface-for-apps" id="data-interface-for-apps"><h3>Data interface for Apps</h3></a>
 <p><img src="images/tech-primer/KFS-Data-Interface.png" alt="KFS Data Interface with Leypa" /></p>
 <p align="center"> <b>Fig 21:</b> KFS Data Interface with Leypa <sup><a href="print.html#references"></a></sup> </p>
+<p>KIP offers a native ability to integrate the diApps to KFS and other storage realms through Leypa, a web3-like integration library supporting both mobile &amp; web applications deriving functionalities from diApps.</p>
+<p>More on Leypa specified at <a href="/pages/specs/kide/kide-specs.md">KIDE &amp; Krama Services Specs</a> document.</p>
+<blockquote>
+<p><strong>Permissioned CRUD Operations - Formal Notation:</strong></p>
+<p><strong>STEP 1:</strong> User initiates a transaction with an intent to purchase a good or consume service.</p>
+<p><strong>STEP 2:</strong> The transaction is generated once signed by the user's private key along with sender &amp; recipient address, attributed to <code>from</code> and <code>to</code> of the <em>identity vectors</em>.</p>
+<p><strong>STEP 3:</strong> The <em>causal vectors</em> are attributed with the behavioral patterns captured by the diApp, before and after the transaction has been signed by the user.</p>
+<p><strong>STEP 4:</strong> The payload attributes such as <code>timestamp</code>, <code>nonce</code>, <code>payload length</code>, <code>fee</code>, <code>tier</code> etc. are captured into the <em>method vectors</em> when the signed transaction is transported from the diApp to the network's transaction pool.</p>
+<p><strong>STEP 5:</strong> The network-level dynamics subjected to fulfil and finalize the given transaction is recorded until the epoch of confirmation expires.</p>
+<p><strong>STEP 6:</strong> Each set of capture pertaining to the concerned user accounts are aggregated by their wallet address. This set is called a &quot;Burst&quot;.</p>
+<p><strong>STEP 7:</strong> The bursts are then passed as an input to stored procedures in a data-driven training model to gain an aggregated measure of value.</p>
+<p><strong>STEP 8:</strong> The obtained value is categorized based on the asset affected by the transaction.</p>
+<p><strong>STEP 9:</strong> The categorized value is averaged with preceding values in the respective KIP wallets.</p>
+<p><strong>STEP 10:</strong> The corresponding TDU balance is updated throughout the network</p>
+</blockquote>
 <p>$$
 \Delta
 $$</p>
-<p>KIP offers a native ability to integrate the diApps to KFS and other storage realms through Leypa, a web3-like integration library supporting both mobile &amp; web applications deriving functionalities from diApps.</p>
-<p>More on Leypa specified at <a href="/pages/specs/kide/kide-specs.md">KIDE &amp; Krama Services Specs</a> document.</p>
 <a class="header" href="print.html#analytics--ai-practices" id="analytics--ai-practices"><h3>Analytics &amp; AI Practices</h3></a>
 <p><img src="images/tech-primer/KFS-Analytics-AI-Practices.png" alt="KFS Analytics &amp; AI Practices" /></p>
 <p align="center"> <b>Fig 22:</b> Analytics & AI Practices on KFS <sup><a href="print.html#references"></a></sup> </p>
-<p>$$
-\Delta
-$$</p>
 <p>Large amounts of transactional raw data as well as structured information can be stored in KFS for performing analytical processing. Krama Cognitive Services offer multi-level heterogenous integration with Machine Learning Algorithms, Neural Networks, Expert Systems &amp; other AI-based models etc.</p>
 <a class="header" href="print.html#conclusion" id="conclusion"><h2>Conclusion</h2></a>
 <p>We propose an efficient system &amp; underlying methods that establish distributed intelligence with big data persistence, scalability, maximized throughput &amp; predictable TCO by various approaches to orchestrate, partition, arrange and pass messages in a deterministic manner, thereby encouraging businesses to adopt a minimalistic approach to obtain exponential scaling on various range of computational devices; accompanied by capturing values, and attribute them to respective transactions propagated by actors in the network.</p>
