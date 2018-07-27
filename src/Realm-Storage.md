@@ -15,3 +15,29 @@ KFS stores the information and persists changes to the stored information in cry
 KIP initiates permissioned KFS networks by deploying a genesis node with a custom swarm key<sup><a href="#references">[19]</a></sup>. The swarm key shall be shared with other nodes that are willing to participate in the permissioned networks. Evidently, the new nodes joining the network with reference to swarm key have access to the files stored in the genesis node & the other predecessor nodes within the *swarm*.
 
 KIP shall also support the ability to request data via RESTful API from other swarms by bridging two or more disparate swarms, keeping the partition between swarms intact.
+
+> **Distributed Storage & Access - Formal Notation:**  
+>
+> **STEP 1:** 
+>
+> **STEP 2:** 
+>
+> **STEP 3:** 
+>
+> **STEP 4:** 
+>
+> **STEP 5:** 
+>
+> **STEP 6:** 
+>
+> **STEP 7:** 
+>
+> **STEP 8:** 
+>
+> **STEP 9:** 
+>
+> **STEP 10:** 
+
+$$
+\Delta
+$$
