@@ -92,7 +92,8 @@ KIP offers a method of differentiation in prioritizing the transactions by facil
 > **STEP 7:** The idle orphans also receive the fast forwarded transactions & observe the verification by appending them into the Tx Log  
 >
 > **STEP 8:** STEP 6 & STEP 7 collectively forms "Shadow Broadcasting". Blocks are produced by packaging the transactions & height of the network is updated to the latest upon broadcast confirmation  
->
+
+**Description 4.4:**
 
 $$
 Total Hops = { \iota( \iota - 1 ) } + { s( s - 1 ) }\\\\

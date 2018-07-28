@@ -8,6 +8,8 @@ The state channels hosted by the grand nodes & star nodes are facilitated by an 
 
 <p align="center"> <b>Fig 3:</b> KIP - Actor-based throughput model with reactive streams<sup><a href="#references"></a></sup> </p>
 
+**Description 4.5:**
+
 $$
 \Delta
 $$
@@ -30,7 +32,9 @@ Each transaction transmitted by diApps (technically clients) to any one of the g
 > **STEP 6:** The grand nodes upon receiving the result, propagates the ordered transactions to respective state channels for fast forward verification
 >
 > **STEP 7:** If any actor is unable to perform the assigned task of classification, the task is forwarded to a fellow actor available at the earliest.
->
+
+**Description 4.6:**
+
 $$
 \Delta
 $$

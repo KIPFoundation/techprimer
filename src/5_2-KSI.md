@@ -6,6 +6,8 @@ Applications in the enterprise environment demands high availability of services
 
 <p align="center"> <b>Fig 12:</b> KSI - Krama Service Interface (Internal Architecture) <sup><a href="#references"></a></sup> </p>
 
+**Description 5.1:**
+
 $$
 \Delta
 $$
@@ -18,3 +20,9 @@ Krama Service Interface (KSI) is a breakthrough enhancement to current thinking 
 2. Maintain availability & service-level transparency
 3. Account the service usage
 4. Measure the utility of services as billable
+
+**Description 5.2:**
+
+$$
+\Delta
+$$

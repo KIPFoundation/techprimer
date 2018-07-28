@@ -38,6 +38,8 @@ KIP shall also support the ability to request data via RESTful API from other sw
 >
 > **STEP 10:** 
 
+**Description 7.1:**
+
 $$
 \Delta
 $$

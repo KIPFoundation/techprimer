@@ -28,6 +28,8 @@ The revised flow with auxiliary features offered by KIP are as follows:
 >
 > **STEP 10:** Corresponding accounts are updated with the new state
 
+**Description 4.13:**
+
 $$
 \Delta
 $$

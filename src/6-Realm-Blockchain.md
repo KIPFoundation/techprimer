@@ -9,6 +9,8 @@ The native 3rd generation blockchain technology offered by KIP exhibits specific
 ![KIP JUG](images/tech-primer/KIP-JUG.png)
 <p align="center"> <b>Fig 14:</b> KIP JUG & Blockchain <sup><a href="#references"></a></sup> </p>
 
+**Description 6.1:**
+
 $$
 \Delta
 $$

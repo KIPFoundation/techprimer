@@ -12,6 +12,8 @@ KFS is designed in an effective manner to support the persistence & operation of
 
 This is made possible by integrating our file system with HDFS<sup><a href="#references">[20]</a></sup> at a fundamental, a highly scalable filesystem for copious amount of Big Data. The native interface is established to create, read, update & delete the information between shared between internal big data file systems and respective KFS network.  
 
+**Description 7.2:**
+
 $$
 \Delta
 $$

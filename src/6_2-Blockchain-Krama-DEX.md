@@ -4,6 +4,8 @@
 
 <p align="center"> <b>Fig 17:</b> KIP Inline DEX Matching Engine <sup><a href="#references"></a></sup> </p>
 
+**Description 6.4:**
+
 $$
 \Delta
 $$

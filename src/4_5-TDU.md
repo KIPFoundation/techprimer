@@ -6,6 +6,9 @@ KIP's wallet is enhanced with an addition of new attribute - TDU, a new mechanis
 
 <p align="center"> <b>Fig 8:</b> TDU - value capture mechanism with interaction vectors<sup><a href="#references"></a></sup> </p>
 
+
+**Description 4.11:**
+
 $$
 \Delta
 $$
@@ -22,10 +25,6 @@ KIP introduces the TDU factor by leveraging the application of *Interaction vect
 
 ![KIP TDU - Persistence of Value](images/tech-primer/KIP-TDU-Persistence-of-Value.png)
 <p align="center"> <b>Fig 9:</b> TDU - Persistence of multi-dimensional value <sup><a href="#references"></a></sup> </p>
-
-$$
-\Delta
-$$
 
 The values captured by the above type of vectors are attributed in a microscopic JSON-like documents, structured and stored in a fully decentralized database (such as Redis, Riak etc.).
 
@@ -52,6 +51,8 @@ The microscopic attributes are aggregated by account type & id, at the end of sp
 > **STEP 9:** The categorized value is averaged with preceding values in the respective KIP wallets.
 >
 > **STEP 10:** The corresponding TDU balance is updated throughout the network
+
+**Description 4.12:**
 
 $$
 \Delta

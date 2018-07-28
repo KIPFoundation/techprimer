@@ -134,12 +134,17 @@ KIP's node benchmark program calculates the reliability based on 2 criteria:
 
 	The collected attribute values are aggregated to find the mean score, upon which the node is declared valid under a tier or vice-versa.
 
+**Description 4.1:**
+
 $$
 \Delta
 $$
 
-2. **Network Specifications:**  
+1. **Network Specifications:**  
   The benchmark programs then communicates with the node by sending a specific number of arbitrary messages in an encapsulated virtual network to calculate the responsive potential of the node. The measured throughput is compared with the average throughput of all the nodes in the network.
+
+
+**Description 4.2:**
 
 $$
 \Delta
@@ -147,6 +152,8 @@ $$
 
 3. **Interest Verification:**  
   The benchmark program also keeps track of the transactions verified by the node for a brief period of time. The monitoring is kept under observation to reserve the interest of the new node in the network & to eliminate bad actor interests from the network. The aggregate of number of transactions dropped over the time observed is compared for shaping the Node Trust Quotient (NTQ) in full.
+
+**Description 4.3:**
 
 $$
 \Delta

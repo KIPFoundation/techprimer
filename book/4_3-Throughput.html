@@ -141,6 +141,7 @@
 <p>The state channels hosted by the grand nodes &amp; star nodes are facilitated by an actor concurrency model consisting of hybrid <code>mutex</code> &amp; <code>chan</code> spaces across the network. This hybrid structure allows us to achieve concurrency without tradeoffs at the JUG(EVM<sup><a href="4_3-Throughput.html#references">[15]</a></sup>-like) on blocking calls needed to perform function calls. However, each node belonging to respective state channel is a member of a subset of a super-set channel, thereby maintaining systemic information on the wallets &amp; smart contracts.</p>
 <p><img src="images//tech-primer/KIP-Throughput.png" alt="KIP Throughput" /></p>
 <p align="center"> <b>Fig 3:</b> KIP - Actor-based throughput model with reactive streams<sup><a href="4_3-Throughput.html#references"></a></sup> </p>
+<p><strong>Description 4.5:</strong></p>
 <p>$$
 \Delta
 $$</p>
@@ -156,6 +157,7 @@ Each transaction transmitted by diApps (technically clients) to any one of the g
 <p><strong>STEP 6:</strong> The grand nodes upon receiving the result, propagates the ordered transactions to respective state channels for fast forward verification</p>
 <p><strong>STEP 7:</strong> If any actor is unable to perform the assigned task of classification, the task is forwarded to a fellow actor available at the earliest.</p>
 </blockquote>
+<p><strong>Description 4.6:</strong></p>
 <p>$$
 \Delta
 $$</p>

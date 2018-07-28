@@ -30,6 +30,8 @@ More on Leypa specified at [KIDE & Krama Services Specs](/pages/specs/kide/kide-
 >
 > **STEP 10:** 
 
+**Description 7.3:**
+
 $$
 \Delta
 $$

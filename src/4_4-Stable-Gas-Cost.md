@@ -6,6 +6,8 @@ In the interest of long-lasting adoption & predictable TCO(Total Cost of Ownersh
 
 <p align="center"> <b>Fig 4:</b> KIP - Macro view of Gas Cost Stabilization <sup><a href="#references"></a></sup> </p>
 
+**Description 4.7:**
+
 $$
 \Delta
 $$
@@ -18,6 +20,12 @@ Node Benchmark program in each on-boarding node uses Pricing API to fetch update
 
 Aggregated cost is calculated based on the tier of hardware independent of the cloud service provider, to ensure covering loss gap for node operators in the maxima region. The new calculated costs are propagated to the network for approval by node operators in the respective tiers. The voting diApp termed as *Tier Cost Contracts* is used by the vested node operators to update the costs upon the approval by majority of eligible node operators. The new costs are made effective within a specific epoch, which is again subjected to voting by the same.
 
+**Description 4.8:**
+
+$$
+\Delta
+$$
+
 ![KIP Infrastructure Cost - KIP Price Discovery](images/tech-primer/KIP-Stable-Gas-Cost-Price-Discovery.png)
 
 <p align="center"> <b>Fig 6:</b> KIP - On-chain KIP Token Price Discovery <sup><a href="#references"></a></sup> </p>
@@ -26,6 +34,12 @@ KIP also exhibits an extensive ability to record the economic value of exchange 
 
 &nbsp;
 The cost to performance ratio calculated by the benchmark program is recorded in a transparent index maintained by respective nodes. The ratio for each OPCODE class is aggregated based on the tier & the global lookup index is updated each time a finite set of new nodes are added or removed belonging to the specified tier for an epoch.
+
+**Description 4.9:**
+
+$$
+\Delta
+$$
 
 The GasTables for each OPCODE & mathematical functions are also maintained in the form of an index.
 
@@ -54,6 +68,8 @@ The gas cost balancer comprises of a self-balancing utilitarian formula which co
 > **STEP 8:** The transaction is ordered, verified & finally confirmed over a number of epochs
 >
 > **STEP 9:** The client is notified of the Txn verification & state changed as per the UX defined
+
+**Description 4.10:**
 
 $$
 \Delta
