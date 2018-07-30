@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>TDU - Total Digital Utility - KIP Technical Primer</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Experimental representation of KIP's Technical Primer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+    </head>
+    <body class="light">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="1-index.html"><strong aria-hidden="true">1.</strong> Home</a></li><li><a href="2-Abstract.html"><strong aria-hidden="true">2.</strong> Abstract</a></li><li><a href="3-Introduction.html"><strong aria-hidden="true">3.</strong> Introduction</a></li><li><ol class="section"><li><a href="3-Introduction.html"><strong aria-hidden="true">3.1.</strong> Existing systems</a></li></ol></li><li><a href="4-Sentinel-Scalability.html"><strong aria-hidden="true">4.</strong> Proposed System</a></li><li><ol class="section"><li><a href="4-Sentinel-Scalability.html"><strong aria-hidden="true">4.1.</strong> Sentinel Scalability</a></li><li><a href="4_2-Modulated-Trust.html"><strong aria-hidden="true">4.2.</strong> Modulated Trust</a></li><li><a href="4_3-Throughput.html"><strong aria-hidden="true">4.3.</strong> Throughput</a></li><li><a href="4_4-Stable-Gas-Cost.html"><strong aria-hidden="true">4.4.</strong> Stable Gas Cost</a></li><li><a href="4_5-TDU.html" class="active"><strong aria-hidden="true">4.5.</strong> TDU - Total Digital Utility</a></li><li><a href="4_6-Tranasction-Lifecycle.html"><strong aria-hidden="true">4.6.</strong> Transaction Lifecycle</a></li><li><a href="4_7-Block-Characterization.html"><strong aria-hidden="true">4.7.</strong> Block Characterization</a></li></ol></li><li><a href="5-KIDE.html"><strong aria-hidden="true">5.</strong> Development Realm</a></li><li><ol class="section"><li><a href="5-KIDE.html"><strong aria-hidden="true">5.1.</strong> KIDE - Krama Integrated Development Environment</a></li><li><a href="5_2-KSI.html"><strong aria-hidden="true">5.2.</strong> Krama Service Interface</a></li><li><a href="5_3-Krama-Services.html"><strong aria-hidden="true">5.3.</strong> Krama Services</a></li></ol></li><li><a href="6-Realm-Blockchain.html"><strong aria-hidden="true">6.</strong> Blockchain Realm</a></li><li><ol class="section"><li><a href="6-Realm-Blockchain.html"><strong aria-hidden="true">6.1.</strong> JUG - The EVM++</a></li><li><a href="6_1-Platform-Fee-Incentives.html"><strong aria-hidden="true">6.2.</strong> Platform fee &amp; incentivization</a></li><li><a href="6_2-Blockchain-Krama-DEX.html"><strong aria-hidden="true">6.3.</strong> DEX - Decentralized Exchange</a></li></ol></li><li><a href="7-Realm-Storage.html"><strong aria-hidden="true">7.</strong> Storage Realm</a></li><li><ol class="section"><li><a href="7-Realm-Storage.html"><strong aria-hidden="true">7.1.</strong> Permissioned Storage</a></li><li><a href="7_1-KFS-BigData-Sharding.html"><strong aria-hidden="true">7.2.</strong> Big Data &amp; Sharding</a></li><li><a href="7_2-Leypa.html"><strong aria-hidden="true">7.3.</strong> Data interface for Apps</a></li><li><a href="7_3-KFS-Analytics-AI.html"><strong aria-hidden="true">7.4.</strong> Analytics &amp; AI Practices</a></li></ol></li><li><a href="Conclusion.html"><strong aria-hidden="true">8.</strong> Conclusion</a></li><li><a href="Improvements.html"><strong aria-hidden="true">9.</strong> Improvements</a></li><li><a href="Implementation.html"><strong aria-hidden="true">10.</strong> Implementation</a></li><li><a href="Acknowledgement.html"><strong aria-hidden="true">11.</strong> Acknowledgement</a></li><li><a href="References.html"><strong aria-hidden="true">12.</strong> References</a></li><li><a href="Further-Reading.html"><strong aria-hidden="true">13.</strong> Further Reading</a></li><li><a href="Appendix-A.html"><strong aria-hidden="true">14.</strong> Appendix A: Terminology</a></li><li><a href="Appendix-B.html"><strong aria-hidden="true">15.</strong> Appendix B: Mathematical Proof &amp; Correctness</a></li><li><a href="Appendix-C.html"><strong aria-hidden="true">16.</strong> Appendix C: FAQs and Concerns</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">KIP Technical Primer</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="4_5-TDU.html#tdu---total-digital-utility" id="tdu---total-digital-utility"><h3>TDU - Total Digital Utility</h3></a>
+<p>KIP's wallet is enhanced with an addition of new attribute - TDU, a new mechanism with a collective measure of values, in high frequency transactional environment.</p>
+<p><img src="images/tech-primer/TDU-Capture_Mechanism.png" alt="TDU - Mechanism" /></p>
+<p align="center"> <b>Fig 8:</b> TDU - value capture mechanism with interaction vectors<sup><a href="4_5-TDU.html#references"></a></sup> </p>
+<p><strong>Description 4.11:</strong></p>
+<p>$$
+\Delta
+$$</p>
+<p>Blockchains could not only be used to secure integrity and achieve transparency, but also harness the intents to create values. Although a few blockchain platforms offer the means to capture and relay the transactional metadata, the mechanisms to aggregate and refer to the same in an ubiquitous manner is seldom practised.</p>
+<p>KIP introduces the TDU factor by leveraging the application of <em>Interaction vectors</em> - the hybrid information vectors setup to source the background of a given transaction. A commercial transaction to purchase goods/service online can be motivated by several factors. The level of transparency introduced by the blockchain enables the information vectors to be categorized into 3 basic categories:</p>
+<ul>
+<li>
+<p><em>Identity vectors:</em> This is a fundamental vector used to identifying the KIP wallet account responsible for the transaction. In both cases of either a PUSH or PULL transaction, the sender &amp; the recipient address are attributed to <code>from</code> and <code>to</code> keys respectively. The from &amp; to attributes can be of any nature - managed by an individual owner OR a smart contract managed by external users.</p>
+</li>
+<li>
+<p><em>Causal vectors:</em> This fundamental vector is used to capture the intent behind a transaction. The attribution of the reason or the cause to initiate a purchase transaction of commodity, relative to a timeline in efforts, could be of incremental value to enterprises. The circumstances influencing the decision to initiate the transaction is attributed in the causal vector &amp; hence the content is fairly dynamic.</p>
+</li>
+<li>
+<p><em>Method vectors:</em> This fundamental vector is a continuation to the efforts of the causal vectors. Each transaction propagated in the KIP network is a payload attributed with timestamp, nonce, fee &amp; associated asset class at any given time. The means to achieve the fulfillment &amp; finality of the transactions are the typical attributes of this vector. The conditions influencing the decision to initiate the transaction is attributed in the causal vector &amp; hence the content is fairly dynamic.</p>
+</li>
+</ul>
+<p><img src="images/tech-primer/KIP-TDU-Persistence-of-Value.png" alt="KIP TDU - Persistence of Value" /></p>
+<p align="center"> <b>Fig 9:</b> TDU - Persistence of multi-dimensional value <sup><a href="4_5-TDU.html#references"></a></sup> </p>
+<p>The values captured by the above type of vectors are attributed in a microscopic JSON-like documents, structured and stored in a fully decentralized database (such as Redis, Riak etc.).</p>
+<p>The microscopic attributes are aggregated by account type &amp; id, at the end of specified number of epochs.</p>
+<blockquote>
+<p><strong>TDU - Formal Notation:</strong></p>
+<p><strong>STEP 1:</strong> User initiates a transaction with an intent to purchase a good or consume service.</p>
+<p><strong>STEP 2:</strong> The transaction is generated once signed by the user's private key along with sender &amp; recipient address, attributed to <code>from</code> and <code>to</code> of the <em>identity vectors</em>.</p>
+<p><strong>STEP 3:</strong> The <em>causal vectors</em> are attributed with the behavioral patterns captured by the diApp, before and after the transaction has been signed by the user.</p>
+<p><strong>STEP 4:</strong> The payload attributes such as <code>timestamp</code>, <code>nonce</code>, <code>payload length</code>, <code>fee</code>, <code>tier</code> etc. are captured into the <em>method vectors</em> when the signed transaction is transported from the diApp to the network's transaction pool.</p>
+<p><strong>STEP 5:</strong> The network-level dynamics subjected to fulfil and finalize the given transaction is recorded until the epoch of confirmation expires.</p>
+<p><strong>STEP 6:</strong> Each set of capture pertaining to the concerned user accounts are aggregated by their wallet address. This set is called a &quot;Burst&quot;.</p>
+<p><strong>STEP 7:</strong> The bursts are then passed as an input to stored procedures in a data-driven training model to gain an aggregated measure of value.</p>
+<p><strong>STEP 8:</strong> The obtained value is categorized based on the asset affected by the transaction.</p>
+<p><strong>STEP 9:</strong> The categorized value is averaged with preceding values in the respective KIP wallets.</p>
+<p><strong>STEP 10:</strong> The corresponding TDU balance is updated throughout the network</p>
+</blockquote>
+<p><strong>Description 4.12:</strong></p>
+<p>$$
+\Delta
+$$</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="4_4-Stable-Gas-Cost.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="4_6-Tranasction-Lifecycle.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="4_4-Stable-Gas-Cost.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="4_6-Tranasction-Lifecycle.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="searchindex.js" type="text/javascript" charset="utf-8"></script>
+        
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

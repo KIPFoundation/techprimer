@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Modulated Trust - KIP Technical Primer</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Experimental representation of KIP's Technical Primer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+    </head>
+    <body class="light">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="1-index.html"><strong aria-hidden="true">1.</strong> Home</a></li><li><a href="2-Abstract.html"><strong aria-hidden="true">2.</strong> Abstract</a></li><li><a href="3-Introduction.html"><strong aria-hidden="true">3.</strong> Introduction</a></li><li><ol class="section"><li><a href="3-Introduction.html"><strong aria-hidden="true">3.1.</strong> Existing systems</a></li></ol></li><li><a href="4-Sentinel-Scalability.html"><strong aria-hidden="true">4.</strong> Proposed System</a></li><li><ol class="section"><li><a href="4-Sentinel-Scalability.html"><strong aria-hidden="true">4.1.</strong> Sentinel Scalability</a></li><li><a href="4_2-Modulated-Trust.html" class="active"><strong aria-hidden="true">4.2.</strong> Modulated Trust</a></li><li><a href="4_3-Throughput.html"><strong aria-hidden="true">4.3.</strong> Throughput</a></li><li><a href="4_4-Stable-Gas-Cost.html"><strong aria-hidden="true">4.4.</strong> Stable Gas Cost</a></li><li><a href="4_5-TDU.html"><strong aria-hidden="true">4.5.</strong> TDU - Total Digital Utility</a></li><li><a href="4_6-Tranasction-Lifecycle.html"><strong aria-hidden="true">4.6.</strong> Transaction Lifecycle</a></li><li><a href="4_7-Block-Characterization.html"><strong aria-hidden="true">4.7.</strong> Block Characterization</a></li></ol></li><li><a href="5-KIDE.html"><strong aria-hidden="true">5.</strong> Development Realm</a></li><li><ol class="section"><li><a href="5-KIDE.html"><strong aria-hidden="true">5.1.</strong> KIDE - Krama Integrated Development Environment</a></li><li><a href="5_2-KSI.html"><strong aria-hidden="true">5.2.</strong> Krama Service Interface</a></li><li><a href="5_3-Krama-Services.html"><strong aria-hidden="true">5.3.</strong> Krama Services</a></li></ol></li><li><a href="6-Realm-Blockchain.html"><strong aria-hidden="true">6.</strong> Blockchain Realm</a></li><li><ol class="section"><li><a href="6-Realm-Blockchain.html"><strong aria-hidden="true">6.1.</strong> JUG - The EVM++</a></li><li><a href="6_1-Platform-Fee-Incentives.html"><strong aria-hidden="true">6.2.</strong> Platform fee &amp; incentivization</a></li><li><a href="6_2-Blockchain-Krama-DEX.html"><strong aria-hidden="true">6.3.</strong> DEX - Decentralized Exchange</a></li></ol></li><li><a href="7-Realm-Storage.html"><strong aria-hidden="true">7.</strong> Storage Realm</a></li><li><ol class="section"><li><a href="7-Realm-Storage.html"><strong aria-hidden="true">7.1.</strong> Permissioned Storage</a></li><li><a href="7_1-KFS-BigData-Sharding.html"><strong aria-hidden="true">7.2.</strong> Big Data &amp; Sharding</a></li><li><a href="7_2-Leypa.html"><strong aria-hidden="true">7.3.</strong> Data interface for Apps</a></li><li><a href="7_3-KFS-Analytics-AI.html"><strong aria-hidden="true">7.4.</strong> Analytics &amp; AI Practices</a></li></ol></li><li><a href="Conclusion.html"><strong aria-hidden="true">8.</strong> Conclusion</a></li><li><a href="Improvements.html"><strong aria-hidden="true">9.</strong> Improvements</a></li><li><a href="Implementation.html"><strong aria-hidden="true">10.</strong> Implementation</a></li><li><a href="Acknowledgement.html"><strong aria-hidden="true">11.</strong> Acknowledgement</a></li><li><a href="References.html"><strong aria-hidden="true">12.</strong> References</a></li><li><a href="Further-Reading.html"><strong aria-hidden="true">13.</strong> Further Reading</a></li><li><a href="Appendix-A.html"><strong aria-hidden="true">14.</strong> Appendix A: Terminology</a></li><li><a href="Appendix-B.html"><strong aria-hidden="true">15.</strong> Appendix B: Mathematical Proof &amp; Correctness</a></li><li><a href="Appendix-C.html"><strong aria-hidden="true">16.</strong> Appendix C: FAQs and Concerns</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">KIP Technical Primer</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="4_2-Modulated-Trust.html#modulated-trust" id="modulated-trust"><h3>Modulated Trust</h3></a>
+<p>KIP leverages the concept of selective hearing<sup><a href="4_2-Modulated-Trust.html#references">[9]</a></sup> in the network to facilitate modulated trust. The concept of state channels presented in this paper is different from the concepts used by the ethereum &amp; other blockchain networks to address throughput. Selective hearing in distributed computing network is a well-practiced to address the interest of a sub set of nodes responsible for persisting / operating the relevant information.</p>
+<p>Similarly, enterprise stakeholders in a heterogenous business network operate to persist transactional information that favours their respective success. The &quot;single floor communication&quot; philosophy adopted by blockchain has been observed as a challenge, to differentiate priorities between verifying transactions pertaining to lower &amp; relatively higher asset values.</p>
+<p><img src="images/tech-primer/KIP-Modulated-Trust.png" alt="KIP Modulated Trust" /></p>
+<p align="center"> <b>Fig 2:</b> KIP - Modulated Trust & NTQ-based state channel approach <sup><a href="4_2-Modulated-Trust.html#references"></a></sup> </p>
+<p>KIP maintains the credibility of the verifying nodes by aggregating the performance &amp; behavior of the nodes and attributing it to NTQ - Node Trust Quotient.
+Each new node added into the KIP network is automatically assigned the role of an orphan. The node is vetted by requesting for vesting a finite number of KIP Tokens as well as uptime to confirm transactions of sorts in the shadow pool for a finite period of time.</p>
+<p>As the node gets attributed with sufficient NTQ scores, the network's distributed intelligence will allocate the node to suitable state channels.</p>
+<p>The network-level definition of a node is as follows:</p>
+<pre><code class="language-go">
+// Node represents a host on the network.
+// The fields of Node may not be modified.
+type Node struct {
+    IP       net.IP // len 4 for IPv4 or 16 for IPv6
+    UDP, TCP uint16 // port numbers
+    ID       NodeID // the node's public key
+
+    RaftPort uint16
+
+    // This is a cached copy of sha3(ID) which is used for node
+    // distance calculations. This is part of Node in order to make it
+    // possible to write tests that need a node at a certain distance.
+    // In those tests, the content of sha will not actually correspond
+    // with ID.
+    sha common.Hash
+
+    // whether this node is currently being pinged in order to replace
+    // it in a bucket
+    contested bool
+
+}
+
+var NodeRoleMap map[common.Hash]uint
+var NodeStateMap map[common.Hash]uint
+
+</code></pre>
+<p>where, the <code>NodeStateMap</code> and <code>NodeRoleMap</code> are dynamic mappings used to refer to the nature of the nodes by the sha3<sup><a href="4_2-Modulated-Trust.html#references">[10]</a></sup> of their Node ID. The mappings are instrumental in identifying the nature of nodes during DHT lookups<sup><a href="4_2-Modulated-Trust.html#references">[11]</a></sup>.</p>
+<p>The decision to route the transport of information is made based on the Kademlia's<sup><a href="4_2-Modulated-Trust.html#references">[12]</a></sup> bucket lookups. In KIP network, nodes are required to persist three k-buckets with each bucket's size limiting to, but not limited to 16 with a concurrency factor of 3, to facilitate operations across all buckets corresponding to lookups among Master Nodes, Star Nodes &amp; Service Nodes respectively.</p>
+<p>Distance between the target is compared as followed:</p>
+<pre><code class="language-go">// distcmp compares the distances a-&gt;target and b-&gt;target.
+// Returns -1 if a is closer to target, 1 if b is closer to target
+// and 0 if they are equal.
+func distcmp(target, a, b common.Hash) int {
+    if(NodeRoleMap[target] == NodeRoleMap[a] == NodeRoleMap[b])
+    {
+        for i := range target {
+            da := a[i] ^ target[i]
+            db := b[i] ^ target[i]
+            if da &gt; db {
+                return 1
+            } else if da &lt; db {
+                return -1
+            }
+        }
+        return 0
+    }
+}
+</code></pre>
+<p><code>distcmp</code> ensures to route transactional information only to nodes belonging to the same level of participation.</p>
+<p>KIP offers a method of differentiation in prioritizing the transactions by facilitating the diApp run by businesses to form a consortium of nodes represented by its important stakeholders.</p>
+<blockquote>
+<p><strong>KIP State Channel - Formal Notation:</strong></p>
+<p><strong>STEP 1:</strong> Interested peers of a particular asset class run the Node (The Peer of the state channel)</p>
+<p><strong>STEP 2:</strong> Node is added into the state channel by <code>addPeer(node, StateChannelID)</code>, according to the interest specified during benchmark. This is the <em>&quot;Follower Node&quot;</em>.</p>
+<p><strong>STEP 3:</strong> Peers of the state channel vote &amp; elect a judge node, run by regulators &amp; compliance practitioners, to distribute asset-specific transactions &amp; confirm the validation from peers. This is the <em>&quot;Star Node&quot;</em></p>
+<p><strong>STEP 4:</strong> Signed transactions are formally verified by the peers of the state channel &amp; confirmed by the leader (star node). This is <em>&quot;Fast Forwarding&quot;</em>.</p>
+<p><strong>STEP 5:</strong> The confirmed transactions are propagated by the star node of the current state channel to those of other state channels followed by the idle orphans in the the shadow pool</p>
+<p><strong>STEP 6:</strong> The star nodes receive the fast forwarded transactions &amp; broadcast them to the peers of their respective state channels. Follower peers observe the verification by appending them into their Tx Log</p>
+<p><strong>STEP 7:</strong> The idle orphans also receive the fast forwarded transactions &amp; observe the verification by appending them into the Tx Log</p>
+<p><strong>STEP 8:</strong> STEP 6 &amp; STEP 7 collectively forms &quot;Shadow Broadcasting&quot;. Blocks are produced by packaging the transactions &amp; height of the network is updated to the latest upon broadcast confirmation</p>
+</blockquote>
+<p><strong>Description 4.4:</strong></p>
+<p>$$
+Total Hops = { \iota( \iota - 1 ) } + { s( s - 1 ) }\\
+O(n^2)
+$$</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="4-Sentinel-Scalability.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="4_3-Throughput.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="4-Sentinel-Scalability.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="4_3-Throughput.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="searchindex.js" type="text/javascript" charset="utf-8"></script>
+        
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
