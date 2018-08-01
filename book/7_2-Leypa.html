@@ -143,16 +143,14 @@
 <p>More on Leypa specified at <a href="/pages/specs/kide/kide-specs.md">KIDE &amp; Krama Services Specs</a> document.</p>
 <blockquote>
 <p><strong>Permissioned CRUD Operations - Formal Notation:</strong></p>
-<p><strong>STEP 1:</strong></p>
-<p><strong>STEP 2:</strong></p>
-<p><strong>STEP 3:</strong></p>
-<p><strong>STEP 4:</strong></p>
-<p><strong>STEP 5:</strong></p>
-<p><strong>STEP 6:</strong></p>
-<p><strong>STEP 7:</strong></p>
-<p><strong>STEP 8:</strong></p>
-<p><strong>STEP 9:</strong></p>
-<p><strong>STEP 10:</strong></p>
+<p><strong>STEP 1:</strong>  User initiates the transaction by signing with the KIP account private key</p>
+<p><strong>STEP 2:</strong> Transaction is wrapped up with nonce, platform fee, data, value, tier and specific KFS Cluster ID by diAPP</p>
+<p><strong>STEP 3:</strong>  The diApp will transfer the user's request through Leypa to Krama Service Interface</p>
+<p><strong>STEP 4:</strong> When the user request to <code>CREATE</code> a file on KFS, Leypa transports the payload to KSI orchestration network and requests to store on specified KFS cluster, returning its <code>KFS file identifier</code> on successful write operation</p>
+<p><strong>STEP 5:</strong> When the user request to <code>READ</code> a KFS file by its <code>KFS file identifier</code>, Leypa transports the request to KFS for lookup by the given ID. Successful lookup returns the content of the file, else returns an error message with appropriate code.</p>
+<p><strong>STEP 6:</strong> When the user request to <code>UPDATE</code> a KFS file by its <code>KFS file identifier</code> along with the new content, Leypa transports the new payload to be updated and requests for lookup by the given file identifier and update the new content to the file. Successful update returns the new hash else returns an error message with appropriate code.</p>
+<p><strong>STEP 7:</strong>
+When the user request to <code>DELETE</code> an existing KFS file with a <code>KFS file identifier</code>, Leypa transports the command to KSI which requests KFS to lookup by the given ID . Successful lookup will delete the content of file, remove the Merkle DAG leaf and update the path, else returns an error message with appropriate code.</p>
 </blockquote>
 <p><strong>Description 7.3:</strong></p>
 <p>$$

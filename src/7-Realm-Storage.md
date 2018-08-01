@@ -18,25 +18,27 @@ KIP shall also support the ability to request data via RESTful API from other sw
 
 > **Distributed Storage & Access - Formal Notation:**  
 >
-> **STEP 1:** 
+> **STEP 1:** User initiates the transaction by signing with the KIP account private key
 >
-> **STEP 2:** 
+> **STEP 2:** The transaction is wrapped up with nonce, platform fee, data, value, tier & targeted cluster to reside by diApp
 >
-> **STEP 3:** 
+> **STEP 3:** The bundled transaction is transferred to Karma Service Interface orchestration network
 >
-> **STEP 4:** 
+> **STEP 4:** The KSI extracts the data from the transaction and pushes it to relevant KFS cluster
 >
-> **STEP 5:** 
+> **STEP 5:** The data is transported to the storage realm (KFS) along with the cluster ID. Rest of the transaction elements are transported to the blockchain
 >
-> **STEP 6:** 
+> **STEP 6:** The leader node of the cluster reads the incoming payload and stores the content in the Merkle DAG, with the file content uniquely referred with a `multihash` checksum
 >
-> **STEP 7:** 
+> **STEP 7:** Participating nodes of the specified cluster verifies the content by checking checksum versus content across the Merkle DAG. If data is tempered with or corrupted, KFS network alerts the file owner and suitable measures can be enforced
 >
-> **STEP 8:** 
+> **STEP 8:** Nodes support `CREATE` operation by storing the file contents and distributing the update heartbeat within the swarm
 >
-> **STEP 9:** 
+> **STEP 9:** Nodes support `READ` operation by accessing the content of the requested file stored in the swarm by its KFS file identifier & transport the content back to the client through data streams
 >
-> **STEP 10:** 
+> **STEP 10:** Nodes support `UPDATE` operation by updating the content of the file with a new entry to the Merkle DAG with the new supplied content queried by its KFS file identifier
+> 
+> **STEP 11:** Nodes support `DELETE` operation by deleting the content of the file and removing the leaf of the Merkle DAG and updating the path
 
 **Description 7.1:**
 
