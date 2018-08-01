@@ -879,16 +879,17 @@ $$</p>
 <p>KIP shall also support the ability to request data via RESTful API from other swarms by bridging two or more disparate swarms, keeping the partition between swarms intact.</p>
 <blockquote>
 <p><strong>Distributed Storage &amp; Access - Formal Notation:</strong></p>
-<p><strong>STEP 1:</strong></p>
-<p><strong>STEP 2:</strong></p>
-<p><strong>STEP 3:</strong></p>
-<p><strong>STEP 4:</strong></p>
-<p><strong>STEP 5:</strong></p>
-<p><strong>STEP 6:</strong></p>
-<p><strong>STEP 7:</strong></p>
-<p><strong>STEP 8:</strong></p>
-<p><strong>STEP 9:</strong></p>
-<p><strong>STEP 10:</strong></p>
+<p><strong>STEP 1:</strong> User initiates the transaction by signing with the KIP account private key</p>
+<p><strong>STEP 2:</strong> The transaction is wrapped up with nonce, platform fee, data, value, tier &amp; targeted cluster to reside by diAPP</p>
+<p><strong>STEP 3:</strong> The bundled transaction is transferred to Karma Service Interface orchestration network</p>
+<p><strong>STEP 4:</strong> The KSI extracts the data from the transaction and pushes it to relevant KFS cluster</p>
+<p><strong>STEP 5:</strong> The data is transported to the storage realm (KFS) along with the cluster ID. Rest of the transaction elements are transported to the blockchain</p>
+<p><strong>STEP 6:</strong> The leader node of the cluster reads the incoming payload and stores the content in the Merkle DAG, with the file content uniquely referred with a  multihash checksum.</p>
+<p><strong>STEP 7:</strong> Participating nodes of the specified cluster verifies the content by checking checksum versus content across the Merkle DAG. If data is tempered with or corrupted, KFS network alerts the file owner and suitable measures can be enforced.</p>
+<p><strong>STEP 8:</strong> Nodes support <code>CREATE</code> operation by storing the file contents and distributing the update heartbeat within the swarm.</p>
+<p><strong>STEP 9:</strong> Nodes support <code>READ</code> operation by accessing the content of the requested file stored in the swarm by its KFS file identifier &amp; transport the content back to the client through data streams.</p>
+<p><strong>STEP 10:</strong> Nodes support <code>UPDATE</code> operation by updating the content of the file with a new entry to the Merkle DAG with the new supplied content queried by its KFS file identifier</p>
+<p><strong>STEP 10:</strong> Nodes support <code>DELETE</code> operation by deleting the content of the file and removing the leaf of the Merkle DAG and updating the path.</p>
 </blockquote>
 <p><strong>Description 7.1:</strong></p>
 <p>$$
@@ -905,16 +906,17 @@ $$</p>
 <p>KIP shall also support the ability to request data via RESTful API from other swarms by bridging two or more disparate swarms, keeping the partition between swarms intact.</p>
 <blockquote>
 <p><strong>Distributed Storage &amp; Access - Formal Notation:</strong></p>
-<p><strong>STEP 1:</strong></p>
-<p><strong>STEP 2:</strong></p>
-<p><strong>STEP 3:</strong></p>
-<p><strong>STEP 4:</strong></p>
-<p><strong>STEP 5:</strong></p>
-<p><strong>STEP 6:</strong></p>
-<p><strong>STEP 7:</strong></p>
-<p><strong>STEP 8:</strong></p>
-<p><strong>STEP 9:</strong></p>
-<p><strong>STEP 10:</strong></p>
+<p><strong>STEP 1:</strong> User initiates the transaction by signing with the KIP account private key</p>
+<p><strong>STEP 2:</strong> The transaction is wrapped up with nonce, platform fee, data, value, tier &amp; targeted cluster to reside by diAPP</p>
+<p><strong>STEP 3:</strong> The bundled transaction is transferred to Karma Service Interface orchestration network</p>
+<p><strong>STEP 4:</strong> The KSI extracts the data from the transaction and pushes it to relevant KFS cluster</p>
+<p><strong>STEP 5:</strong> The data is transported to the storage realm (KFS) along with the cluster ID. Rest of the transaction elements are transported to the blockchain</p>
+<p><strong>STEP 6:</strong> The leader node of the cluster reads the incoming payload and stores the content in the Merkle DAG, with the file content uniquely referred with a  multihash checksum.</p>
+<p><strong>STEP 7:</strong> Participating nodes of the specified cluster verifies the content by checking checksum versus content across the Merkle DAG. If data is tempered with or corrupted, KFS network alerts the file owner and suitable measures can be enforced.</p>
+<p><strong>STEP 8:</strong> Nodes support <code>CREATE</code> operation by storing the file contents and distributing the update heartbeat within the swarm.</p>
+<p><strong>STEP 9:</strong> Nodes support <code>READ</code> operation by accessing the content of the requested file stored in the swarm by its KFS file identifier &amp; transport the content back to the client through data streams.</p>
+<p><strong>STEP 10:</strong> Nodes support <code>UPDATE</code> operation by updating the content of the file with a new entry to the Merkle DAG with the new supplied content queried by its KFS file identifier</p>
+<p><strong>STEP 10:</strong> Nodes support <code>DELETE</code> operation by deleting the content of the file and removing the leaf of the Merkle DAG and updating the path.</p>
 </blockquote>
 <p><strong>Description 7.1:</strong></p>
 <p>$$
@@ -938,16 +940,14 @@ $$</p>
 <p>More on Leypa specified at <a href="/pages/specs/kide/kide-specs.md">KIDE &amp; Krama Services Specs</a> document.</p>
 <blockquote>
 <p><strong>Permissioned CRUD Operations - Formal Notation:</strong></p>
-<p><strong>STEP 1:</strong></p>
-<p><strong>STEP 2:</strong></p>
-<p><strong>STEP 3:</strong></p>
-<p><strong>STEP 4:</strong></p>
-<p><strong>STEP 5:</strong></p>
-<p><strong>STEP 6:</strong></p>
-<p><strong>STEP 7:</strong></p>
-<p><strong>STEP 8:</strong></p>
-<p><strong>STEP 9:</strong></p>
-<p><strong>STEP 10:</strong></p>
+<p><strong>STEP 1:</strong>  User initiates the transaction by signing with the KIP account private key</p>
+<p><strong>STEP 2:</strong> Transaction is wrapped up with nonce, platform fee, data, value, tier and specific KFS Cluster ID by diAPP</p>
+<p><strong>STEP 3:</strong>  The diApp will transfer the user's request through Leypa to Krama Service Interface</p>
+<p><strong>STEP 4:</strong> When the user request to <code>CREATE</code> a file on KFS, Leypa transports the payload to KSI orchestration network and requests to store on specified KFS cluster, returning its <code>KFS file identifier</code> on successful write operation</p>
+<p><strong>STEP 5:</strong> When the user request to <code>READ</code> a KFS file by its <code>KFS file identifier</code>, Leypa transports the request to KFS for lookup by the given ID. Successful lookup returns the content of the file, else returns an error message with appropriate code.</p>
+<p><strong>STEP 6:</strong> When the user request to <code>UPDATE</code> a KFS file by its <code>KFS file identifier</code> along with the new content, Leypa transports the new payload to be updated and requests for lookup by the given file identifier and update the new content to the file. Successful update returns the new hash else returns an error message with appropriate code.</p>
+<p><strong>STEP 7:</strong>
+When the user request to <code>DELETE</code> an existing KFS file with a <code>KFS file identifier</code>, Leypa transports the command to KSI which requests KFS to lookup by the given ID . Successful lookup will delete the content of file, remove the Merkle DAG leaf and update the path, else returns an error message with appropriate code.</p>
 </blockquote>
 <p><strong>Description 7.3:</strong></p>
 <p>$$
