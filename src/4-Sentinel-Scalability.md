@@ -140,7 +140,7 @@ $$
 \Delta
 $$
 
-1. **Network Specifications:**  
+2. **Network Specifications:**  
   The benchmark programs then communicates with the node by sending a specific number of arbitrary messages in an encapsulated virtual network to calculate the responsive potential of the node. The measured throughput is compared with the average throughput of all the nodes in the network.
 
 
